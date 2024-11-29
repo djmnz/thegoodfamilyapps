@@ -21,6 +21,9 @@ jobs:
           lfs: false
       - name: Install NPM Packages
         run: npm install
+      - uses: actions/setup-go@v5
+        with:
+        go-version: '^1.23.3' # The Go version to download (if necessary) and use.
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
