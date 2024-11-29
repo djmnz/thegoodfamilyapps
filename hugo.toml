@@ -176,3 +176,10 @@ lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true
+
+[deployment]
+
+[[deployment.targets]]
+name = "production"
+# Microsoft Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure
+URL = "azblob://$web"
