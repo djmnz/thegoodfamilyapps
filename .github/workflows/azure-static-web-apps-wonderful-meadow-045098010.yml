@@ -46,10 +46,11 @@ jobs:
 
       - name: Install npm dependencies
         run: npm install
-        
+
       - name: Build And Deploy
         id: builddeploy
         run:
+          hugo build
           hugo deploy --target production
         env:
           AZURE_STORAGE_ACCOUNT: thegoodfamilyapps
