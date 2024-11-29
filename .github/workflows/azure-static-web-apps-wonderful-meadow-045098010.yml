@@ -51,11 +51,16 @@ jobs:
         id: build
         run:
           hugo build
-      - name: Build
+      - name: Install Azure CLI
+        uses: azure/cli@v1
+        with:
+          az_version: '2.54.0'  # Specify the version you want to install, or leave it out to use the latest version
+      - name: Deploy
         id: deploy
         run:
           hugo deploy --target production
         env:
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           AZURE_STORAGE_ACCOUNT: thegoodfamilyapps
           AZURE_STORAGE_KEY: ${{secrets.AZURE_PRODUCTION_STORAGE_KEY}}
 
