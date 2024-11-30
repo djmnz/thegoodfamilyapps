@@ -51,10 +51,6 @@ jobs:
         id: build
         run:
           hugo build
-      - name: Install Azure CLI
-        uses: azure/cli@v1
-        with:
-          az_version: '2.54.0'  # Specify the version you want to install, or leave it out to use the latest version
       - name: Deploy
         id: deploy
         run:
