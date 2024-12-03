@@ -1,9 +1,9 @@
 {
-  "name": "hugoplate",
-  "description": "hugo tailwindcss boilerplate",
+  "name": "thegoodfamilyapps",
+  "description": "The Good Family Apps Website",
   "version": "1.17.2",
   "license": "MIT",
-  "author": "zeon.studio",
+  "author": "djmnz",
   "scripts": {
     "dev": "hugo server",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
